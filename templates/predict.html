@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="../static/images.png" type="image/x-icon">
+        <title> Price </title>
+        <style type="text/css">
+            .divcolor
+            {
+                
+                border-radius: 10px;
+                background-color: #e0d8d8;
+                padding: 20px;
+                margin-top: 50px;
+                margin-left: 250px;
+                margin-right: 250px;
+            }
+
+            .bold{
+                font-weight: 900;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="w3-panel w3-pale-blue w3-bottombar w3-border-blue w3-border">
+            <h2 style="text-align: center;" class="bold">  Used Hyundai Car Price Prediction Model </h2>
+       </div>
+
+    <div class="divcolor">
+        <ul>
+            <li> Car Model = {{ data[0] }} </li>
+            <li> Year = {{ data[1] }} </li>
+            <li> Mileage = {{ data[2] }}</li>
+            <li> Total Run = {{ data[3] }}</li>
+            <li> Tax = {{ data[4] }}</li>
+            <li> Engine Size = {{ data[5] }}</li>
+            <li> Transmission = {{ data[6] }}</li>
+            <li> Fule = {{ data[7] }}</li>
+        </ul>
+
+        <div>
+            <center>
+                <h2 class="bold"> {{ pred_text }} </h2>
+            </center>
+        </div>
+    </div>
+    </body>
+</html>

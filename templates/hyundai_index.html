@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="../static/images.png" type="image/x-icon">
+        <style type="text/css">
+            .divcolor
+            {
+                
+                border-radius: 10px;
+                background-color: #e0d8d8;
+                padding: 20px;
+                margin-top: 50px;
+                margin-left: 250px;
+                margin-right: 250px;
+            }
+
+            input[type=number], select 
+            {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 5px 0;
+                display: block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            input[type=submit] {
+            width: 100%;
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+            background-color: #45a049;
+            }
+
+            .bold{
+                font-weight: 900;
+            }
+        </style>
+    </head>
+    <body>
+            <div class="w3-panel w3-pale-blue w3-bottombar w3-border-blue w3-border">
+                 <h2 style="text-align: center;" class="bold"> Used Hyundai Car Price Prediction Model</h2>
+            </div>
+            <div class="divcolor">
+                <form method="post" action="{{ url_for('hyundai_price') }}" >
+                    <div>
+                        <label for="model" class="bold"> Car Model : </label>
+                        <select for="model" name="model">
+                            <option value="I10"> I10 </option>
+                            <option value="I20"> I20 </option>
+                            <option value="I30"> I30 </option>
+                            <option value="I40"> I40 </option>
+                            <option value="I800"> I800 </option>
+                            <option value="IX20"> IX20 </option>
+                            <option value="IX35"> IX35 </option>
+                            <option value="Ioniq"> Ioniq </option>
+                            <option value="Kona"> Kona </option>
+                            <option value="Santa Fe"> Santa Fe </option>
+                            <option value="Tucson"> Tucson </option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="year" class="bold"> Year :</label>
+                        <input type="number" name="year" min="2000" max="2021" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="mileage" class="bold"> Mileage : </label>
+                        <input type="number" name="mileage" min="2" max="30" step="0.1" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="total_run" class="bold"> Total Run : </label>
+                        <input type="number" name="total_run" min="1" max="200000" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="tax" class="bold"> Tax : </label>
+                        <input type="number" name="tax" min="0" max="400" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="engine_size" class="bold"> Engine Size : </label>
+                        <input type="number" name="engine_size" min="1" max="2.5" step="0.1" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="trans" class="bold"> Transmission : </label>
+                        <select name="trans">
+                            <option value="Automatic"> Automatic  </option>
+                            <option value="Semi-Auto"> Semi-Auto </option>
+                            <option value="Manual"> Manual </option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="fule" class="bold"> Fule : </label>
+                        <select name="fule">
+                            <option value="Petrol"> Petrol  </option>
+                            <option value="Diesel"> Diesel  </option>
+                            <option value="Hybrid"> Hybrid </option>
+                        </select>
+                    </div>
+                    <br><br>
+                    <button class="w3-btn w3-block w3-red w3-centre-align bold">Get Price</button>
+                </form>
+            </div>
+    </body>
+</html>
